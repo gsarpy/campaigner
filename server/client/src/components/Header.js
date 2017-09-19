@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import Billing from './Billing';
 
 class Header extends Component {
-  renderAuthButton() {
+  renderLoggedInNav() {
     switch (this.props.auth) {
       case null:
         return 'Updating...';
       case false:
         return <a href="/auth/google">Login With Google</a>;
       default:
-        return <a href="/api/logout">Logout</a>;
+        return [
+          <li key={'1'}><Billing /></li>,
+          <li key={'2'}><a href="/api/logout">Logout</a></li>,
+        ];
     }
   }
 
   render() {
     const brandLink = (this.props.auth) ? '/surveys' : '/';
-
     return (
       <nav>
         <div className="nav-wrapper">
@@ -27,9 +30,7 @@ class Header extends Component {
             Campaigner
           </Link>
           <ul className="right">
-            <li>
-              {this.renderAuthButton()}
-            </li>
+            {this.renderLoggedInNav()}
           </ul>
         </div>
       </nav>
