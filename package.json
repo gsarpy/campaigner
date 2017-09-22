@@ -25,7 +25,7 @@
     "passport-google-oauth20": "^1.0.0",
     "stripe": "^5.0.0"
   },
-  "description": "Email campaign system",
+  "description": "Survey campaign app for getting customer feedback",
   "devDependencies": {
     "babel-eslint": "^8.0.0",
     "eslint": "^4.7.0",

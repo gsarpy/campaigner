@@ -1,2 +1,2 @@
 # campaigner
-An email campaign system like MailChimp
+A survey campaign app for getting feedback from your customers and users!
