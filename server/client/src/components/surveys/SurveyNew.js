@@ -9,7 +9,6 @@ class SurveyNew extends Component {
   render() {
     return (
       <div style={surveyStyle}>
-        <h5>New Survey:</h5>
         <SurveyForm />
       </div>
     );
